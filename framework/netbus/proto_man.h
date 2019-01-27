@@ -1,0 +1,54 @@
+#ifndef _PROTO_MAN_H_
+#define _PROTO_MAN_H_
+
+#include <string>
+#include <map>
+
+#include "google/protobuf/message.h"
+
+namespace bb {
+	enum {
+		PROTO_JSON = 0,
+		PROTO_BUF = 1,
+	};
+
+	struct cmd_msg {
+		int stype;
+		int ctype;
+		unsigned int utag;
+		void* body;
+	};
+
+	struct raw_cmd
+	{
+		int stype;
+		int ctype;
+		unsigned int utag;
+		unsigned char* raw_data;
+		int raw_len;
+	};
+
+	class  proto_man {
+	public:
+		static void init(int proto_type);
+		static int proto_type();
+
+		static void register_protobuf_cmd_map(std::map<int, std::string>& map);
+		static const char* protobuf_cmd_name(int ctype);
+
+		// 只解析head(stype,ctype,utag) 不解析body
+		static bool decode_raw_cmd(unsigned char* cmd, int cmd_len, struct raw_cmd* raw);
+		static bool decode_cmd_msg(unsigned char* cmd, int cmd_len, struct cmd_msg** out_msg);
+		static void cmd_msg_free(struct cmd_msg* msg);
+
+		static unsigned char* encode_msg_to_raw(const struct cmd_msg* msg, int* out_len);
+		static void msg_raw_free(unsigned char* raw);
+
+		static google::protobuf::Message* create_message(const char* type_name);
+		static void release_message(google::protobuf::Message* m);
+	};
+
+}
+
+
+#endif // !_PROTO_MAN_H_

@@ -1,0 +1,17 @@
+#ifndef _CONSTANT_H_
+#define _CONSTANT_H_
+
+
+#define SESSION_CACHE_CAPACITY 6000
+#define WQ_CACHE_CAPACITY 4096
+#define WBUF_CACHE_CAPACITY 1024
+#define CMD_SZIE_CACHE 1024
+#define RECV_LEN 1024
+enum {
+	TCP_SOCKET,
+	WS_SOCKET,
+};
+
+
+
+#endif
