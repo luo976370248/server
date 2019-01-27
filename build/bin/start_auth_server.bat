@@ -1,0 +1,1 @@
+game.exe ../../apps/lua/scripts/  hall_server/main.lua

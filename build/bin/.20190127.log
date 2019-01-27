@@ -1,0 +1,24 @@
+20190127 22:39:46 ERROR trunk:0  
+cannot open ../../../../scripts/lua/scripts/auth_server/main.lua: No such file or directory
+20190127 22:41:20 ERROR trunk:0  
+cannot open ../../../../scripts/lua/scripts/auth_server/main.lua: No such file or directory
+20190127 22:43:06 DEBUG ../../apps/lua/scripts/auth_server/main.lua:1  
+hello world
+20190127 22:43:06 ERROR ../../apps/lua/scripts/auth_server/main.lua:2  
+hello world
+20190127 22:43:15 DEBUG ../../apps/lua/scripts/auth_server/main.lua:1  
+hello world
+20190127 22:43:15 ERROR ../../apps/lua/scripts/auth_server/main.lua:2  
+hello world
+20190127 22:44:35 DEBUG ../../apps/lua/scripts/auth_server/main.lua:1  
+hello world
+20190127 22:44:35 ERROR ../../apps/lua/scripts/auth_server/main.lua:2  
+hello world
+20190127 22:46:12 DEBUG ../../apps/lua/scripts/auth_server/main.lua:1  
+hello world
+20190127 22:46:12 ERROR ../../apps/lua/scripts/auth_server/main.lua:2  
+hello world
+20190127 22:46:16 DEBUG ../../apps/lua/scripts/hall_server/main.lua:1  
+hello world1
+20190127 22:46:16 ERROR ../../apps/lua/scripts/hall_server/main.lua:2  
+hello world1
